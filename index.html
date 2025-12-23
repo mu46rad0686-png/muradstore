@@ -1,102 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8">
-<title>روج آفا بيع وشراء</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  direction: rtl;
-  margin: 0;
-}
-header {
-  background: #c62828;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 26px;
-}
-.container {
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
-}
-.add-product, .product {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-input, button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-}
-button {
-  background: #c62828;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-.products img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>ماركت مراد</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      direction: rtl;
+      text-align: center;
+    }
+
+    header {
+      background: #c62828;
+      color: white;
+      padding: 30px 15px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .price {
+      color: #c62828;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-<header>روج آفا بيع وشراء</header>
+<header>
+  أهلين فيك بماركت مراد
+  <div class="subtitle">بيع وشراء – روج آفا</div>
+</header>
 
-<div class="container">
+<div class="products">
 
-<div class="add-product">
-<h3>إضافة منتج</h3>
-<input id="name" placeholder="اسم المنتج">
-<input id="price" placeholder="السعر">
-<input id="image" placeholder="رابط صورة المنتج">
-<input id="phone" placeholder="رقم واتساب">
-<button onclick="addProduct()">إضافة</button>
+  <!-- منتج 1 -->
+  <div class="product">
+    <img src="https://i.imgur.com/4AiXzf8.jpeg">
+    <h3>ساعة يد رجالية</h3>
+    <div class="price">10 دولار</div>
+  </div>
+
+  <!-- منتج 2 -->
+  <div class="product">
+    <img src="https://i.imgur.com/ZcLLrkY.jpeg">
+    <h3>سماعة بلوتوث</h3>
+    <div class="price">15 دولار</div>
+  </div>
+
+  <!-- منتج 3 -->
+  <div class="product">
+    <img src="https://i.imgur.com/9Qe6R0M.jpeg">
+    <h3>نظارة شمسية</h3>
+    <div class="price">8 دولار</div>
+  </div>
+
 </div>
-
-<div id="products"></div>
-
-</div>
-
-<script>
-function addProduct() {
-  const name = document.getElementById("name").value;
-  const price = document.getElementById("price").value;
-  const image = document.getElementById("image").value;
-  const phone = document.getElementById("phone").value;
-
-  if (!name || !price || !image || !phone) {
-    alert("عبي كل الحقول");
-    return;
-  }
-
-  const product = `
-    <div class="product">
-      <h3>${name}</h3>
-      <p>السعر: ${price}</p>
-      <img src="${image}">
-      <br><br>
-      <a href="https://wa.me/${phone}" target="_blank">
-        <button>تواصل واتساب</button>
-      </a>
-    </div>
-  `;
-
-  document.getElementById("products").innerHTML += product;
-
-  document.getElementById("name").value = "";
-  document.getElementById("price").value = "";
-  document.getElementById("image").value = "";
-  document.getElementById("phone").value = "";
-}
-</script>
 
 </body>
 </html>
