@@ -2,53 +2,75 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Murad Store</title>
+  <title>روج آفا بيع وشراء</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      text-align: center;
+      background: #f2f2f2;
       direction: rtl;
+      margin: 0;
     }
     header {
-      background: #2c3e50;
+      background: #c62828;
       color: white;
       padding: 20px;
+      text-align: center;
+      font-size: 28px;
     }
-    .product {
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .add-product, .product {
       background: white;
-      margin: 20px;
       padding: 15px;
       border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
     }
     button {
-      background: #27ae60;
+      background: #c62828;
       color: white;
       border: none;
-      padding: 10px 20px;
+      cursor: pointer;
       border-radius: 5px;
-      font-size: 16px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Murad Store</h1>
-  <p>موقع بيع وشراء الأدوات المنزلية</p>
-</header>
+<header>روج آفا بيع وشراء</header>
 
-<div class="product">
-  <h2>طقم أواني</h2>
-  <p>سعر: 50$</p>
-  <button>شراء</button>
+<div class="container">
+
+  <div class="add-product">
+    <h3>إضافة منتج</h3>
+    <input id="name" placeholder="اسم المنتج">
+    <input id="price" placeholder="السعر">
+    <textarea id="desc" placeholder="وصف المنتج"></textarea>
+    <button onclick="addProduct()">إضافة</button>
+  </div>
+
+  <div id="products"></div>
+
 </div>
 
-<div class="product">
-  <h2>مكنسة كهربائية</h2>
-  <p>سعر: 120$</p>
-  <button>شراء</button>
-</div>
+<script>
+  function addProduct() {
+    const name = document.getElementById('name').value;
+    const price = document.getElementById('price').value;
+    const desc = document.getElementById('desc').value;
 
-</body>
-</html>
+    if (!name || !price) {
+      alert("عبي كل المعلومات");
+      return;
+    }
+
+    const div = document.createElement('div');
+    div.className =
