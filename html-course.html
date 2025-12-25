@@ -1,48 +1,35 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>كورس HTML</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      direction: rtl;
-      text-align: center;
-      background: #f2f2f2;
-      margin: 0;
-    }
-
-    h1 {
-      background: #0d6efd;
-      color: white;
-      padding: 15px;
-    }
-
-    iframe {
-      width: 90%;
-      height: 315px;
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <h1>كورس HTML من الصفر</h1>
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="html-course.html">كورس HTML</a>
+  <a href="about.html">من أنا</a>
+</nav>
 
-  <p>الدرس الأول: مقدمة HTML</p>
+<section class="page">
+  <h1>📘 كورس HTML للمبتدئين</h1>
+  <p>تعلم HTML من الصفر بأسلوب سهل</p>
 
-  <!-- هون مكان الفيديو -->
-  <iframe
-  src="https://www.youtube.com/embed/q3yFo-t1ykw"
-  frameborder="0"
-  allowfullscreen>
-  </iframe>
-    
-  
-  
-  
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/qfPUMV9J5yw"
+      title="HTML Course"
+      allowfullscreen></iframe>
+  </div>
+
+  <ul class="lessons">
+    <li>✔️ ما هو HTML</li>
+    <li>✔️ العناصر والعناوين</li>
+    <li>✔️ الروابط والصور</li>
+    <li>✔️ القوائم والجداول</li>
+  </ul>
+</section>
 
 </body>
 </html>
