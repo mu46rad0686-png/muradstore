@@ -10,25 +10,49 @@ body {
   color: #ffffff;
   min-height: 100vh;
   direction: rtl;
-}
-
 /* شريط التنقل */
 nav {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 15px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 14px 10px;
+  background: rgba(13, 110, 253, 0.95);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
-  color: #ffffff;
-  margin: 0 15px;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.18);
 }
+
+/* تحسين للموبايل */
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+}
+
+
+
+
 
 /* الهيدر */
 header {
