@@ -1,70 +1,80 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>منصة مراد لتعليم البرمجة</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- خط عربي -->
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: 'Cairo', sans-serif;
-  background: #f2f4f7;
-  direction: rtl;
-}
-
-header {
-  background: linear-gradient(135deg, #1976d2, #0d47a1);
-  color: white;
-  padding: 25px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-.course {
-  background: white;
-  margin-bottom: 25px;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-.course h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
+  background: #eef2f7;
   color: #222;
 }
 
-.video {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  border-radius: 14px;
+header {
+  background: linear-gradient(135deg,#0d47a1,#1976d2);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
   overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.video iframe {
-  position: absolute;
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
   width: 100%;
-  height: 100%;
-  border: none;
+  height: 200px;
+  object-fit: cover;
 }
 
-.btn {
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.card-content p {
+  font-size: 15px;
+  color: #555;
+}
+
+.card-content a {
   display: block;
   margin-top: 15px;
   background: #2e7d32;
@@ -73,17 +83,19 @@ header {
   padding: 12px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 16px;
 }
 
-.btn:hover {
+.card-content a:hover {
   background: #1b5e20;
 }
 
 footer {
+  background: #0d47a1;
+  color: white;
   text-align: center;
   padding: 15px;
-  color: #777;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -91,66 +103,49 @@ footer {
 <body>
 
 <header>
-  منصة مراد لتعليم البرمجة
+  <h1>منصة مراد لتعليم البرمجة</h1>
+  <p>تعلّم البرمجة خطوة بخطوة — بالعربي</p>
 </header>
 
 <div class="container">
 
-  <!-- دورة HTML -->
-  <div class="course">
-    <h2>الدورة 1: تعلم HTML من الصفر</h2>
-
-    <div class="video">
-      <iframe 
-        src="https://www.youtube.com/embed/qz0aGYrrlhU"
-        allowfullscreen>
-      </iframe>
+  <div class="card">
+    <img src="https://img.youtube.com/vi/qfPUMV9J5yw/maxresdefault.jpg">
+    <div class="card-content">
+      <h2>HTML من الصفر</h2>
+      <p>تعلم أساسيات بناء صفحات الويب بطريقة سهلة ومبسطة.</p>
+      <a href="https://www.youtube.com/watch?v=qfPUMV9J5yw" target="_blank">
+        مشاهدة الكورس
+      </a>
     </div>
-
-    <a class="btn" target="_blank"
-       href="https://www.youtube.com/watch?v=qz0aGYrrlhU">
-       مشاهدة على يوتيوب
-    </a>
   </div>
 
-  <!-- دورة CSS -->
-  <div class="course">
-    <h2>الدورة 2: تعلم CSS للمبتدئين</h2>
-
-    <div class="video">
-      <iframe 
-        src="https://www.youtube.com/embed/yfoY53QXEnI"
-        allowfullscreen>
-      </iframe>
+  <div class="card">
+    <img src="https://img.youtube.com/vi/Z-5QVutAEW4/maxresdefault.jpg">
+    <div class="card-content">
+      <h2>CSS للمبتدئين</h2>
+      <p>تصميم مواقع احترافية وتنسيق الصفحات بأسلوب عصري.</p>
+      <a href="https://www.youtube.com/watch?v=Z-5QVutAEW4" target="_blank">
+        مشاهدة الكورس
+      </a>
     </div>
-
-    <a class="btn" target="_blank"
-       href="https://www.youtube.com/watch?v=yfoY53QXEnI">
-       مشاهدة على يوتيوب
-    </a>
   </div>
 
-  <!-- دورة JavaScript -->
-  <div class="course">
-    <h2>الدورة 3: تعلم JavaScript أساسيات</h2>
-
-    <div class="video">
-      <iframe 
-        src="https://www.youtube.com/embed/hdI2bqOjy3c"
-        allowfullscreen>
-      </iframe>
+  <div class="card">
+    <img src="https://img.youtube.com/vi/GM6dQBmc-Xg/maxresdefault.jpg">
+    <div class="card-content">
+      <h2>JavaScript من الصفر</h2>
+      <p>إضافة التفاعل والحياة إلى مواقعك بطريقة احترافية.</p>
+      <a href="https://www.youtube.com/watch?v=GM6dQBmc-Xg" target="_blank">
+        مشاهدة الكورس
+      </a>
     </div>
-
-    <a class="btn" target="_blank"
-       href="https://www.youtube.com/watch?v=hdI2bqOjy3c">
-       مشاهدة على يوتيوب
-    </a>
   </div>
 
 </div>
 
 <footer>
-  © 2025 منصة مراد – تعليم البرمجة بالعربي
+© 2025 منصة مراد — تعليم البرمجة بالعربي
 </footer>
 
 </body>
