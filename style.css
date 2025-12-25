@@ -1,23 +1,26 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Tajawal", Arial, sans-serif;
+  font-family: "Cairo", Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  background: #f4f6f8;
-  color: #222;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  min-height: 100vh;
+  direction: rtl;
 }
 
 /* شريط التنقل */
 nav {
-  background: #0d47a1;
+  background: rgba(0, 0, 0, 0.3);
   padding: 15px;
   text-align: center;
 }
 
 nav a {
-  color: white;
+  color: #ffffff;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -27,44 +30,33 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* الهيرو */
-.hero {
-  background: linear-gradient(
-      rgba(13, 71, 161, 0.9),
-      rgba(13, 71, 161, 0.9)
-    ),
-    url("bg.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 70px 20px;
+/* الهيدر */
+header {
+  padding: 80px 20px;
   text-align: center;
-  color: white;
 }
 
-.hero h1 {
-  font-size: 32px;
+header h1 {
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
-.hero p {
+header p {
   font-size: 18px;
   opacity: 0.9;
 }
 
 /* الكورسات */
-.cards {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
 .card {
-  background: white;
-  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 90%;
+  max-width: 350px;
+  margin: 40px auto;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
 }
 
 .card h2 {
@@ -72,28 +64,20 @@ nav a:hover {
 }
 
 .card p {
-  color: #555;
+  opacity: 0.85;
 }
 
-.btn {
+.card a {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: #0d47a1;
-  color: white;
+  background: #00c6ff;
+  color: #000;
   text-decoration: none;
   border-radius: 6px;
+  font-weight: bold;
 }
 
-.btn:hover {
-  background: #08306b;
-}
-
-/* الفوتر */
-footer {
-  margin-top: 50px;
-  padding: 20px;
-  text-align: center;
-  color: #666;
-  font-size: 14px;
+.card a:hover {
+  background: #7ae0ff;
 }
