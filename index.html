@@ -1,37 +1,154 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>منصة مراد لتعليم البرمجة</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    /* ====== الشريط العلوي ====== */
+    nav {
+      background: #0d6efd;
+      padding: 12px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== الهيدر ====== */
+    .header {
+      background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+      color: white;
+      text-align: center;
+      padding: 50px 15px;
+    }
+
+    .header h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* ====== المحتوى ====== */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 15px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #0d6efd;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #084298;
+    }
+
+    /* ====== الفوتر ====== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-  <a href="index.html">الرئيسية</a>
-  <a href="html-course.html">كورس HTML</a>
-  <a href="css-course.html">كورس CSS</a>
-  <a href="about.html">من أنا</a>
-</nav>
+  <!-- الشريط العلوي -->
+  <nav>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="html-course.html">كورس HTML</a></li>
+      <li><a href="course-css.html">كورس CSS</a></li>
+      <li><a href="about.html">من أنا</a></li>
+    </ul>
+  </nav>
 
-<div class="header">
-  <h1>منصة مراد لتعليم البرمجة</h1>
-  <p>تعلّم البرمجة من الصفر — شرح عربي مبسّط</p>
-</div>
-
-<div class="container">
-  <div class="card">
-    <h2>📘 دورة HTML للمبتدئين</h2>
-    <p>تعلّم أساسيات HTML من الصفر.</p>
-    <a class="button" href="html-course.html">ابدأ الكورس</a>
+  <!-- الهيدر -->
+  <div class="header">
+    <h1>منصة مراد لتعليم البرمجة</h1>
+    <p>تعلم البرمجة من الصفر — شرح عربي مبسط</p>
   </div>
 
-  <div class="card">
-    <h2>🎨 دورة CSS للمبتدئين</h2>
-    <p>تعلّم تنسيق المواقع بشكل احترافي.</p>
-    <a class="button" href="css-course.html">ابدأ الكورس</a>
+  <!-- الكورسات -->
+  <div class="container">
+
+    <div class="card">
+      <h2>📘 دورة HTML للمبتدئين</h2>
+      <p>تعلم أساسيات HTML من الصفر وبأسلوب سهل.</p>
+      <a class="button" href="html-course.html">ابدأ الكورس</a>
+    </div>
+
+    <div class="card">
+      <h2>🎨 دورة CSS للمبتدئين</h2>
+      <p>تعلم تنسيق المواقع بشكل احترافي وجميل.</p>
+      <a class="button" href="course-css.html">ابدأ الكورس</a>
+    </div>
+
   </div>
-</div>
+
+  <footer>
+    © 2025 منصة مراد — جميع الحقوق محفوظة
+  </footer>
 
 </body>
 </html>
