@@ -1,25 +1,34 @@
+/* شريط التنقل العلوي */
 nav {
-  background: #ffffff;
-  padding: 15px 10px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: #0d6efd; /* أزرق احترافي */
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-nav a {
-  color: #0d6efd;
-  margin: 0 12px;
+/* ترتيب العناصر */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+/* الروابط */
+nav ul li a {
+  color: white;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: 0.3s;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
-nav a:hover {
-  background: #0d6efd;
-  color: white;
+/* عند المرور */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
