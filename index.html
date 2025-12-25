@@ -1,151 +1,153 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
-  <meta charset="UTF-8">
-  <title>منصة مراد لتعليم البرمجة</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      direction: rtl;
-    }
+    <meta charset="UTF-8">
+    <title>منصة مراد لتعليم البرمجة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            direction: rtl;
+        }
 
-    /* شريط التنقل */
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      background-color: #198754;
-      text-align: center;
-    }
+        header {
+            background: #1565c0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-    nav ul li {
-      display: inline;
-      margin: 10px;
-    }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 10px 20px;
-      background-color: #198754;
-      border-radius: 5px;
-    }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
 
-    nav ul li a:hover {
-      background-color: #157347;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            background: #198754;
+            border-radius: 8px;
+        }
 
-    /* الأزرار */
-    a.button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 20px;
-      background-color: #198754;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-      transition: background-color 0.3s ease;
-    }
+        nav ul li a:hover {
+            background: #157347;
+        }
 
-    a.button:hover {
-      background-color: #157347;
-    }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
 
-    /* الفيديو */
-    .video-section {
-      margin-top: 20px;
-      text-align: center;
-    }
+        h1 {
+            color: #0d6efd;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
 
-    iframe {
-      width: 90%;
-      height: 315px;
-      margin-top: 20px;
-    }
+        .course-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            width: 30%;
+            margin: 15px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    /* قسم التعليقات */
-    .comments-section {
-      margin-top: 30px;
-      text-align: center;
-    }
+        .course-box h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
 
-    .comments-section textarea {
-      width: 70%;
-      height: 100px;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 8px;
+        }
 
-    .comments-section button {
-      padding: 10px 20px;
-      background-color: #198754;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
+        .feedback {
+            margin-top: 20px;
+        }
 
-    .comments-section button:hover {
-      background-color: #157347;
-    }
+        .feedback input,
+        .feedback textarea {
+            padding: 10px;
+            width: 80%;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
 
-    /* تنسيق العنوان */
-    h1 {
-      text-align: center;
-      background-color: #1565c0;
-      color: white;
-      padding: 15px;
-      font-size: 24px;
-    }
-  </style>
+        .feedback button {
+            padding: 10px 20px;
+            background: #1565c0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .feedback button:hover {
+            background: #0d47a1;
+        }
+    </style>
 </head>
+
 <body>
-  <!-- شريط التنقل -->
-  <nav>
-    <ul>
-      <li><a href="#home">الرئيسية</a></li>
-      <li><a href="#courses">الدورات</a></li>
-      <li><a href="#videos">الفيديوهات</a></li>
-      <li><a href="#contact">اتصل بنا</a></li>
-    </ul>
-  </nav>
+    <header>
+        <h1>منصة مراد لتعليم البرمجة</h1>
+        <nav>
+            <ul>
+                <li><a href="#courses">الدورات</a></li>
+                <li><a href="#videos">الفيديوهات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- العنوان -->
-  <h1>منصة مراد لتعليم البرمجة</h1>
+    <div id="courses" class="container">
+        <div class="course-box">
+            <h2>دورة HTML</h2>
+            <iframe src="https://www.youtube.com/embed/qz0aGYrrlhU" allowfullscreen></iframe>
+            <p>تعلم HTML من الصفر بشكل مفصل</p>
+        </div>
 
-  <!-- محتوى الموقع -->
-  <div class="content" id="home">
-    <div class="container">
-      <h2>كورسات تعليم البرمجة</h2>
-      <a href="#courses" class="button">ابدأ الكورس</a>
+        <div class="course-box">
+            <h2>دورة CSS</h2>
+            <iframe src="https://www.youtube.com/embed/yfoY53QXEnI" allowfullscreen></iframe>
+            <p>تعلم تصميم المواقع باستخدام CSS</p>
+        </div>
+
+        <div class="course-box">
+            <h2>دورة JavaScript</h2>
+            <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" allowfullscreen></iframe>
+            <p>تعلم البرمجة باستخدام JavaScript</p>
+        </div>
     </div>
-  </div>
 
-  <!-- قسم الدورات والفيديوهات -->
-  <div class="video-section" id="courses">
-    <h2>الدورة 1: مقدمة إلى HTML</h2>
-    <iframe src="https://www.youtube.com/embed/q3Y0YHVlmOA" frameborder="0" allowfullscreen></iframe>
-  </div>
+    <div id="feedback" class="container feedback">
+        <h2>التقييمات</h2>
+        <textarea rows="4" placeholder="أدخل تعليقك هنا..."></textarea>
+        <br>
+        <button>إرسال التعليق</button>
+    </div>
 
-  <!-- قسم التعليقات والتقييمات -->
-  <div class="comments-section">
-    <h3>التقييمات</h3>
-    <textarea placeholder="أدخل تعليقك هنا..."></textarea><br>
-    <button>إرسال التقييم</button>
-  </div>
-
-  <!-- محتوى إضافي - يمكنك إضافة مزيد من المحتوى مثل الفيديوهات الأخرى أو النصوص هنا -->
-  <div class="additional-content" id="videos">
-    <h2>تعلم المزيد حول HTML</h2>
-    <p>في هذا الدرس، سنتناول أساسيات لغة HTML.</p>
-  </div>
-
+    <footer style="background: #1565c0; color: white; text-align: center; padding: 10px;">
+        <p>&copy; 2025 منصة مراد لتعليم البرمجة</p>
+    </footer>
 </body>
+
 </html>
