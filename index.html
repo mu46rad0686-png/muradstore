@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>منصة مراد لتعليم البرمجة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>منصة مراد لتعليم البرمجة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
     body {
       margin: 0;
-      font-family: "Cairo", Arial, sans-serif;
       background: #f4f6f8;
-      direction: rtl;
-      color: #222;
+      color: #333;
     }
 
     header {
       background: linear-gradient(135deg, #1e88e5, #1565c0);
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      padding: 60px 20px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 36px;
     }
 
     header p {
@@ -33,15 +36,15 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 0 15px;
     }
 
     .course {
       background: white;
-      border-radius: 14px;
-      padding: 20px;
+      border-radius: 16px;
+      padding: 25px;
       margin-bottom: 30px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
@@ -49,18 +52,23 @@
     .course h2 {
       margin-top: 0;
       color: #1565c0;
+      font-size: 26px;
     }
 
-    .video-box {
+    .course p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .video {
       position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
+      padding-top: 56.25%;
       border-radius: 12px;
-      margin-top: 15px;
+      overflow: hidden;
+      margin-bottom: 20px;
     }
 
-    .video-box iframe {
+    .video iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -71,13 +79,12 @@
 
     .btn {
       display: inline-block;
-      margin-top: 15px;
       background: #1e88e5;
       color: white;
-      padding: 12px 22px;
-      border-radius: 8px;
+      padding: 12px 28px;
+      border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       transition: 0.3s;
     }
 
@@ -86,81 +93,60 @@
     }
 
     footer {
-      background: #111;
-      color: #bbb;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
+      background: #0d47a1;
+      color: white;
       margin-top: 50px;
-      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>منصة مراد لتعليم البرمجة</h1>
-  <p>تعلم البرمجة من الصفر – شرح عربي مبسّط</p>
-</header>
+  <header>
+    <h1>منصة مراد لتعليم البرمجة</h1>
+    <p>تعلّم البرمجة من الصفر — شرح عربي مبسّط</p>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <!-- كورس HTML -->
-  <div class="course">
-    <h2>📘 دورة HTML للمبتدئين (عربي)</h2>
-    <p>شرح HTML من الصفر وبأسلوب سهل.</p>
+    <div class="course">
+      <h2>📘 دورة HTML للمبتدئين (عربي)</h2>
+      <p>تعلم أساسيات HTML من الصفر وبأسلوب سهل.</p>
 
-    <div class="video-box">
-      <iframe 
-        src="https://www.youtube.com/embed/6QAELgirvjs" 
-        allowfullscreen>
-      </iframe>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/qfPUMV9J5yw" allowfullscreen></iframe>
+      </div>
+
+      <a class="btn" href="https://www.youtube.com/playlist?list=PLDoPjvoNmBAw_t_S1K2K9Z0CzZKzYJ6gK" target="_blank">
+        مشاهدة الدورة على يوتيوب
+      </a>
     </div>
 
-    <a class="btn" href="https://www.youtube.com/watch?v=6QAELgirvjs" target="_blank">
-      مشاهدة على يوتيوب
-    </a>
-  </div>
+    <div class="course">
+      <h2>🎨 دورة CSS للمبتدئين (عربي)</h2>
+      <p>تعلم تصميم المواقع وتحسين شكل الصفحات.</p>
 
-  <!-- كورس CSS -->
-  <div class="course">
-    <h2>🎨 دورة CSS للمبتدئين (عربي)</h2>
-    <p>تعلم تنسيق المواقع خطوة بخطوة.</p>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/0W6qz0-aDaM" allowfullscreen></iframe>
+      </div>
 
-    <div class="video-box">
-      <iframe 
-        src="https://www.youtube.com/embed/1Rs2ND1ryYc" 
-        allowfullscreen>
-      </iframe>
+      <a class="btn" href="https://www.youtube.com/playlist?list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe" target="_blank">
+        مشاهدة الدورة على يوتيوب
+      </a>
     </div>
 
-    <a class="btn" href="https://www.youtube.com/watch?v=1Rs2ND1ryYc" target="_blank">
-      مشاهدة على يوتيوب
-    </a>
   </div>
 
-  <!-- كورس JavaScript -->
-  <div class="course">
-    <h2>⚡ دورة JavaScript للمبتدئين (عربي)</h2>
-    <p>أساسيات الجافاسكربت بلغة عربية واضحة.</p>
-
-    <div class="video-box">
-      <iframe 
-        src="https://www.youtube.com/embed/GM6dQBmc-Xg" 
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <a class="btn" href="https://www.youtube.com/watch?v=GM6dQBmc-Xg" target="_blank">
-      مشاهدة على يوتيوب
-    </a>
-  </div>
-
-</div>
-
-<footer>
-  © 2025 منصة مراد لتعليم البرمجة – جميع الحقوق محفوظة
-</footer>
+  <footer>
+    © 2025 منصة مراد — جميع الحقوق محفوظة
+  </footer>
 
 </body>
 </html>
