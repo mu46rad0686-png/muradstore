@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: Tahoma, Arial;
-  background: #f4f6f8;
-  direction: rtl;
+* {
+  box-sizing: border-box;
+  font-family: "Tajawal", Arial, sans-serif;
 }
 
-/* الشريط العلوي */
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* شريط التنقل */
 nav {
-  background: #0d6efd;
+  background: #0d47a1;
   padding: 15px;
   text-align: center;
 }
@@ -19,12 +23,22 @@ nav a {
   font-weight: bold;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
 /* الهيرو */
 .hero {
-  background: linear-gradient(135deg, #0d6efd, #0a58ca);
-  color: white;
-  padding: 60px 20px;
+  background: linear-gradient(
+      rgba(13, 71, 161, 0.9),
+      rgba(13, 71, 161, 0.9)
+    ),
+    url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 70px 20px;
   text-align: center;
+  color: white;
 }
 
 .hero h1 {
@@ -32,39 +46,54 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* الكروت */
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* الكورسات */
 .cards {
   display: flex;
   justify-content: center;
-  margin-top: -40px;
+  margin-top: 40px;
 }
 
 .card {
   background: white;
   width: 300px;
   padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 10px;
   text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .card h2 {
   margin-bottom: 10px;
 }
 
+.card p {
+  color: #555;
+}
+
 .btn {
   display: inline-block;
   margin-top: 15px;
-  background: #0d6efd;
-  color: white;
   padding: 10px 20px;
-  border-radius: 8px;
+  background: #0d47a1;
+  color: white;
   text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background: #08306b;
 }
 
 /* الفوتر */
 footer {
+  margin-top: 50px;
+  padding: 20px;
   text-align: center;
-  margin: 40px 0;
-  color: #555;
+  color: #666;
+  font-size: 14px;
 }
