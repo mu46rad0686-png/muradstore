@@ -1,151 +1,165 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-<meta charset="UTF-8">
-<title>منصة مراد لتعليم البرمجة</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>منصة مراد لتعليم البرمجة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Cairo", Arial, sans-serif;
+      background: #f4f6f8;
+      direction: rtl;
+      color: #222;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Cairo', sans-serif;
-  background: #eef2f7;
-  color: #222;
-}
+    header {
+      background: linear-gradient(135deg, #1e88e5, #1565c0);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-header {
-  background: linear-gradient(135deg,#0d47a1,#1976d2);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 30px;
-}
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
 
-header p {
-  margin-top: 10px;
-  font-size: 16px;
-  opacity: 0.9;
-}
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 15px;
+    }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  gap: 25px;
-}
+    .course {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
 
-.card {
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
+    .course h2 {
+      margin-top: 0;
+      color: #1565c0;
+    }
 
-.card:hover {
-  transform: translateY(-8px);
-}
+    .video-box {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
+    .video-box iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
-.card-content {
-  padding: 20px;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #1e88e5;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-.card-content h2 {
-  margin: 0 0 10px;
-  font-size: 22px;
-}
+    .btn:hover {
+      background: #0d47a1;
+    }
 
-.card-content p {
-  font-size: 15px;
-  color: #555;
-}
-
-.card-content a {
-  display: block;
-  margin-top: 15px;
-  background: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.card-content a:hover {
-  background: #1b5e20;
-}
-
-footer {
-  background: #0d47a1;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
-</style>
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <h1>منصة مراد لتعليم البرمجة</h1>
-  <p>تعلّم البرمجة خطوة بخطوة — بالعربي</p>
+  <p>تعلم البرمجة من الصفر – شرح عربي مبسّط</p>
 </header>
 
 <div class="container">
 
-  <div class="card">
-    <img src="https://img.youtube.com/vi/qfPUMV9J5yw/maxresdefault.jpg">
-    <div class="card-content">
-      <h2>HTML من الصفر</h2>
-      <p>تعلم أساسيات بناء صفحات الويب بطريقة سهلة ومبسطة.</p>
-      <a href="https://www.youtube.com/watch?v=qfPUMV9J5yw" target="_blank">
-        مشاهدة الكورس
-      </a>
+  <!-- كورس HTML -->
+  <div class="course">
+    <h2>📘 دورة HTML للمبتدئين (عربي)</h2>
+    <p>شرح HTML من الصفر وبأسلوب سهل.</p>
+
+    <div class="video-box">
+      <iframe 
+        src="https://www.youtube.com/embed/6QAELgirvjs" 
+        allowfullscreen>
+      </iframe>
     </div>
+
+    <a class="btn" href="https://www.youtube.com/watch?v=6QAELgirvjs" target="_blank">
+      مشاهدة على يوتيوب
+    </a>
   </div>
 
-  <div class="card">
-    <img src="https://img.youtube.com/vi/Z-5QVutAEW4/maxresdefault.jpg">
-    <div class="card-content">
-      <h2>CSS للمبتدئين</h2>
-      <p>تصميم مواقع احترافية وتنسيق الصفحات بأسلوب عصري.</p>
-      <a href="https://www.youtube.com/watch?v=Z-5QVutAEW4" target="_blank">
-        مشاهدة الكورس
-      </a>
+  <!-- كورس CSS -->
+  <div class="course">
+    <h2>🎨 دورة CSS للمبتدئين (عربي)</h2>
+    <p>تعلم تنسيق المواقع خطوة بخطوة.</p>
+
+    <div class="video-box">
+      <iframe 
+        src="https://www.youtube.com/embed/1Rs2ND1ryYc" 
+        allowfullscreen>
+      </iframe>
     </div>
+
+    <a class="btn" href="https://www.youtube.com/watch?v=1Rs2ND1ryYc" target="_blank">
+      مشاهدة على يوتيوب
+    </a>
   </div>
 
-  <div class="card">
-    <img src="https://img.youtube.com/vi/GM6dQBmc-Xg/maxresdefault.jpg">
-    <div class="card-content">
-      <h2>JavaScript من الصفر</h2>
-      <p>إضافة التفاعل والحياة إلى مواقعك بطريقة احترافية.</p>
-      <a href="https://www.youtube.com/watch?v=GM6dQBmc-Xg" target="_blank">
-        مشاهدة الكورس
-      </a>
+  <!-- كورس JavaScript -->
+  <div class="course">
+    <h2>⚡ دورة JavaScript للمبتدئين (عربي)</h2>
+    <p>أساسيات الجافاسكربت بلغة عربية واضحة.</p>
+
+    <div class="video-box">
+      <iframe 
+        src="https://www.youtube.com/embed/GM6dQBmc-Xg" 
+        allowfullscreen>
+      </iframe>
     </div>
+
+    <a class="btn" href="https://www.youtube.com/watch?v=GM6dQBmc-Xg" target="_blank">
+      مشاهدة على يوتيوب
+    </a>
   </div>
 
 </div>
 
 <footer>
-© 2025 منصة مراد — تعليم البرمجة بالعربي
+  © 2025 منصة مراد لتعليم البرمجة – جميع الحقوق محفوظة
 </footer>
 
 </body>
