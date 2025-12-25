@@ -1,66 +1,108 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>كورس HTML من الصفر</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      background: #f2f2f2;
-      margin: 0;
-    }
-    header {
-      background: #0d6efd;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .video-box {
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border-radius: 8px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دورة HTML للمبتدئين</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Tahoma, Arial;
+    background:#f4f6f8;
+    color:#333;
+}
+header{
+    background:linear-gradient(135deg,#1e88e5,#1565c0);
+    color:#fff;
+    padding:40px 20px;
+    text-align:center;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+.course-box{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    padding:20px;
+}
+.course-box img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+.lesson{
+    background:#f1f5f9;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.lesson a{
+    background:#1e88e5;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+}
+.lesson a:hover{
+    background:#1565c0;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+    font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>كورس HTML من الصفر</h1>
-  <p>شرح مبسّط باللغة العربية</p>
+    <h1>دورة HTML للمبتدئين (عربي)</h1>
+    <p>تعلم HTML من الصفر حتى الاحتراف بأسلوب بسيط</p>
 </header>
 
 <div class="container">
-  <div class="video-box">
-    <h2>الدرس 1: مقدمة HTML</h2>
+    <div class="course-box">
 
-    <!-- فيديو يوتيوب عربي -->
-    <iframe
-  width="100%"
-  height="315"
-  src="https://www.youtube.com/embed/qz0aGYrrlhU"
-  title="شرح HTML بالعربي"
-  frameborder="0"
-  allowfullscreen>
-    </iframe> 
-    
-  
+        <img src="https://i.ytimg.com/vi/qfPUMV9J5yw/maxresdefault.jpg" alt="HTML Course">
 
-    <p>
-      في هذا الدرس نتعلم ما هي HTML وكيف نبدأ ببناء أول صفحة ويب.
-    </p>
-  </div>
+        <h2>📚 محتوى الدورة</h2>
+
+        <div class="lesson">
+            <span>1️⃣ مقدمة HTML</span>
+            <a href="https://www.youtube.com/watch?v=qfPUMV9J5yw" target="_blank">مشاهدة</a>
+        </div>
+
+        <div class="lesson">
+            <span>2️⃣ العناصر والعناوين</span>
+            <a href="https://www.youtube.com/watch?v=QG5aEmS9Fu0" target="_blank">مشاهدة</a>
+        </div>
+
+        <div class="lesson">
+            <span>3️⃣ الروابط والصور</span>
+            <a href="https://www.youtube.com/watch?v=7LxA9qXUY5k" target="_blank">مشاهدة</a>
+        </div>
+
+        <div class="lesson">
+            <span>4️⃣ الجداول والنماذج</span>
+            <a href="https://www.youtube.com/watch?v=dpw9EHDh2bM" target="_blank">مشاهدة</a>
+        </div>
+
+    </div>
 </div>
+
+<footer>
+    © 2025 منصة مراد لتعليم البرمجة
+</footer>
 
 </body>
 </html>
