@@ -6,102 +6,98 @@
 }
 
 body {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #ffffff;
-  min-height: 100vh;
   direction: rtl;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
 /* شريط التنقل */
-nav {
+.navbar {
+  background: #1e3a8a;
+  padding: 15px 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 22px;
-  padding: 14px 10px;
-  background: rgba(13, 110, 253, 0.95);
-  backdrop-filter: blur(6px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-nav a {
+.logo {
   color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-nav a:hover {
-  background: rgba(255, 255, 255, 0.18);
-}
-
-/* تحسين للموبايل */
-@media (max-width: 600px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  nav a {
-    font-size: 13px;
-  }
-}
-
-
-
-
-
-/* الهيدر */
-header {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-/* الكورسات */
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 90%;
-  max-width: 350px;
-  margin: 40px auto;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  backdrop-filter: blur(8px);
-}
-
-.card h2 {
-  margin-bottom: 10px;
-}
-
-.card p {
-  opacity: 0.85;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #00c6ff;
-  color: #000;
-  text-decoration: none;
-  border-radius: 6px;
+  font-size: 22px;
   font-weight: bold;
 }
 
-.card a:hover {
-  background: #7ae0ff;
+.links a {
+  color: #e5e7eb;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links a:hover {
+  color: #ffffff;
+}
+
+/* الهيدر */
+.hero {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* الكورسات */
+.courses {
+  padding: 50px 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course {
+  background: white;
+  width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.course h2 {
+  margin-bottom: 10px;
+}
+
+.course p {
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+.course a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.course a:hover {
+  background: #1e40af;
+}
+
+/* الفوتر */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #e5e7eb;
+  margin-top: 40px;
 }
