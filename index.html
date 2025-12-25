@@ -6,49 +6,145 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
       direction: rtl;
+    }
+
+    /* شريط التنقل */
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #198754;
       text-align: center;
-      background: #f4f6f8;
-      margin: 0;
     }
-    h1 {
-      background: #0d6efd;
+
+    nav ul li {
+      display: inline;
+      margin: 10px;
+    }
+
+    nav ul li a {
       color: white;
-      padding: 20px;
-      margin: 0;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #198754;
+      border-radius: 5px;
     }
-    .card {
-      background: white;
-      margin: 40px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    nav ul li a:hover {
+      background-color: #157347;
     }
-    a {
+
+    /* الأزرار */
+    a.button {
       display: inline-block;
       margin-top: 15px;
       padding: 12px 20px;
-      background: #198754;
+      background-color: #198754;
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-size: 18px;
+      transition: background-color 0.3s ease;
     }
-    a:hover {
-      background: #157347;
+
+    a.button:hover {
+      background-color: #157347;
+    }
+
+    /* الفيديو */
+    .video-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    iframe {
+      width: 90%;
+      height: 315px;
+      margin-top: 20px;
+    }
+
+    /* قسم التعليقات */
+    .comments-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .comments-section textarea {
+      width: 70%;
+      height: 100px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .comments-section button {
+      padding: 10px 20px;
+      background-color: #198754;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .comments-section button:hover {
+      background-color: #157347;
+    }
+
+    /* تنسيق العنوان */
+    h1 {
+      text-align: center;
+      background-color: #1565c0;
+      color: white;
+      padding: 15px;
+      font-size: 24px;
     }
   </style>
 </head>
 <body>
+  <!-- شريط التنقل -->
+  <nav>
+    <ul>
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#courses">الدورات</a></li>
+      <li><a href="#videos">الفيديوهات</a></li>
+      <li><a href="#contact">اتصل بنا</a></li>
+    </ul>
+  </nav>
 
+  <!-- العنوان -->
   <h1>منصة مراد لتعليم البرمجة</h1>
 
-  <div class="card">
-    <h2>كورس HTML</h2>
-    <p>تعلم HTML من الصفر وبأسلوب سهل</p>
-    <a href="html-course.html">ابدأ الكورس</a>
+  <!-- محتوى الموقع -->
+  <div class="content" id="home">
+    <div class="container">
+      <h2>كورسات تعليم البرمجة</h2>
+      <a href="#courses" class="button">ابدأ الكورس</a>
+    </div>
+  </div>
+
+  <!-- قسم الدورات والفيديوهات -->
+  <div class="video-section" id="courses">
+    <h2>الدورة 1: مقدمة إلى HTML</h2>
+    <iframe src="https://www.youtube.com/embed/q3Y0YHVlmOA" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- قسم التعليقات والتقييمات -->
+  <div class="comments-section">
+    <h3>التقييمات</h3>
+    <textarea placeholder="أدخل تعليقك هنا..."></textarea><br>
+    <button>إرسال التقييم</button>
+  </div>
+
+  <!-- محتوى إضافي - يمكنك إضافة مزيد من المحتوى مثل الفيديوهات الأخرى أو النصوص هنا -->
+  <div class="additional-content" id="videos">
+    <h2>تعلم المزيد حول HTML</h2>
+    <p>في هذا الدرس، سنتناول أساسيات لغة HTML.</p>
   </div>
 
 </body>
