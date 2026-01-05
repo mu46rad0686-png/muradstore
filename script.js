@@ -1,36 +1,55 @@
-const questions = [
-  {
-    question: "كم عدد قارات العالم؟",
-    answers: ["5", "6", "7"],
-    correct: "7"
-  },
-  {
-    question: "ما أسرع حيوان بري؟",
-    answers: ["الحصان", "الفهد", "الأسد"],
-    correct: "الفهد"
-  },
-  {
-    question: "ما عاصمة اليابان؟",
-    answers: ["بكين", "سيول", "طوكيو"],
-    correct: "طوكيو"
-  }
-];
+const quizzes = {
+  religion: [
+    {
+      question: "كم عدد أركان الإسلام؟",
+      answers: ["4", "5", "6"],
+      correct: "5"
+    },
+    {
+      question: "ما اسم أول نبي؟",
+      answers: ["نوح", "آدم", "إبراهيم"],
+      correct: "آدم"
+    }
+  ],
+
+  history: [
+    {
+      question: "من هو أول خليفة في الإسلام؟",
+      answers: ["عمر بن الخطاب", "علي بن أبي طالب", "أبو بكر الصديق"],
+      correct: "أبو بكر الصديق"
+    },
+    {
+      question: "في أي عام فتح المسلمون مكة؟",
+      answers: ["8 هـ", "10 هـ", "5 هـ"],
+      correct: "8 هـ"
+    }
+  ]
+};
+
+let currentQuiz = [];
+let currentQuestion;
 
 const questionEl = document.getElementById("question");
 const answersEl = document.getElementById("answers");
-const nextBtn = document.getElementById("next");
+const quizBox = document.getElementById("quiz");
+
+function startQuiz(type) {
+  currentQuiz = quizzes[type];
+  quizBox.style.display = "block";
+  loadQuestion();
+}
 
 function loadQuestion() {
   answersEl.innerHTML = "";
-  const q = questions[Math.floor(Math.random() * questions.length)];
-  questionEl.textContent = q.question;
+  currentQuestion = currentQuiz[Math.floor(Math.random() * currentQuiz.length)];
+  questionEl.textContent = currentQuestion.question;
 
-  q.answers.forEach(answer => {
+  currentQuestion.answers.forEach(answer => {
     const btn = document.createElement("button");
     btn.textContent = answer;
-    btn.classList.add("answer-btn");
+    btn.className = "answer-btn";
     btn.onclick = () => {
-      if (answer === q.correct) {
+      if (answer === currentQuestion.correct) {
         alert("إجابة صحيحة ✅");
       } else {
         alert("إجابة خاطئة ❌");
@@ -40,5 +59,6 @@ function loadQuestion() {
   });
 }
 
-nextBtn.onclick = loadQuestion;
-loadQuestion();
+function nextQuestion() {
+  loadQuestion();
+}
