@@ -6,21 +6,20 @@ const quizzes = {
       correct: "5"
     },
     {
-      question: "ما اسم أول نبي؟",
+      question: "من هو أول نبي؟",
       answers: ["نوح", "آدم", "إبراهيم"],
       correct: "آدم"
     }
   ],
-
   history: [
     {
       question: "من هو أول خليفة في الإسلام؟",
-      answers: ["عمر بن الخطاب", "علي بن أبي طالب", "أبو بكر الصديق"],
+      answers: ["عمر بن الخطاب", "أبو بكر الصديق", "علي بن أبي طالب"],
       correct: "أبو بكر الصديق"
     },
     {
       question: "في أي عام فتح المسلمون مكة؟",
-      answers: ["8 هـ", "10 هـ", "5 هـ"],
+      answers: ["8 هـ", "5 هـ", "10 هـ"],
       correct: "8 هـ"
     }
   ]
@@ -35,6 +34,7 @@ const quizBox = document.getElementById("quiz");
 
 function startQuiz(type) {
   currentQuiz = quizzes[type];
+  document.getElementById("categories").style.display = "none";
   quizBox.style.display = "block";
   loadQuestion();
 }
@@ -48,17 +48,17 @@ function loadQuestion() {
     const btn = document.createElement("button");
     btn.textContent = answer;
     btn.className = "answer-btn";
+
     btn.onclick = () => {
       if (answer === currentQuestion.correct) {
-        alert("إجابة صحيحة ✅");
+        questionEl.textContent = "أحسنت يا بطل 💪🔥";
+        setTimeout(loadQuestion, 1200);
       } else {
-        alert("إجابة خاطئة ❌");
+        btn.style.background = "#e74c3c";
+        btn.style.color = "white";
       }
     };
+
     answersEl.appendChild(btn);
   });
-}
-
-function nextQuestion() {
-  loadQuestion();
 }
