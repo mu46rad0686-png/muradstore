@@ -10,63 +10,62 @@ body {
 }
 
 .container {
-  background: #ffffff;
+  background: white;
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
   padding: 25px;
-  border-radius: 15px;
+  border-radius: 18px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-h1 {
-  margin-bottom: 20px;
-  color: #2c3e50;
+.name {
+  margin-bottom: 15px;
+  color: #1e3799;
+  font-size: 28px;
 }
 
 #categories button {
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   margin: 8px 0;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #1e3799;
   color: white;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
-}
-
-#categories button:hover {
-  background: #0c2461;
 }
 
 #quiz {
   margin-top: 15px;
 }
 
+#timer {
+  font-size: 20px;
+  color: #c0392b;
+  margin-bottom: 10px;
+}
+
 #question {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
-  color: #333;
 }
 
 .answer-btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 6px 0;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #ecf0f1;
+  font-size: 16px;
   cursor: pointer;
-  font-size: 15px;
 }
 
-.answer-btn:hover {
-  background: #dcdde1;
-}
-
-.next-btn {
-  margin-top: 10px;
-  background: #27ae60;
-  color: white;
+#message {
+  font-size: 26px;
+  color: #27ae60;
+  margin-top: 15px;
+  font-weight: bold;
 }
