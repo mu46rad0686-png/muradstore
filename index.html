@@ -2,26 +2,27 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>أسئلة ثقافية</title>
+  <title>مراد</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-  <h1>🧠 الأسئلة الثقافية</h1>
 
-  <!-- اختيار القسم -->
+  <h1 class="name">مراد</h1>
+
   <div id="categories">
     <button onclick="startQuiz('religion')">🕌 أسئلة دينية</button>
     <button onclick="startQuiz('history')">📜 أسئلة تاريخية</button>
   </div>
 
-  <!-- مكان السؤال -->
   <div id="quiz" style="display:none;">
+    <div id="timer">⏱️ 10</div>
     <p id="question"></p>
     <div id="answers"></div>
-    <button onclick="nextQuestion()">سؤال جديد</button>
+    <p id="message"></p>
   </div>
+
 </div>
 
 <script src="script.js"></script>
