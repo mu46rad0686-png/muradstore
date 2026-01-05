@@ -1,15 +1,30 @@
-<div id="quiz" style="display:none;">
-  <div class="top-bar">
-    <span id="score">⭐ 0</span>
-    <span id="timer">⏱️ 10</span>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أسئلة ثقافية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="name">مراد</div>
+
+    <div class="top-bar">
+      <span id="score">⭐ 0</span>
+      <span id="timer">⏱️ 10</span>
+    </div>
+
+    <p id="question">كم عدد أركان الإسلام؟</p>
+
+    <div id="answers">
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+    </div>
+
+    <p id="message"></p>
   </div>
 
-  <p id="question"></p>
-  <div id="answers"></div>
-  <p id="message"></p>
-
-  <!-- أصوات -->
-  <audio id="sound-correct" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3"></audio>
-  <audio id="sound-wrong" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3"></audio>
-</div>
-<link rel="stylesheet" href="style.css">
+</body>
+</html>
