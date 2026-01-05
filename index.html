@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>مراد</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="container">
-
-  <h1 class="name">مراد</h1>
-
-  <div id="categories">
-    <button onclick="startQuiz('religion')">🕌 أسئلة دينية</button>
-    <button onclick="startQuiz('history')">📜 أسئلة تاريخية</button>
+<div id="quiz" style="display:none;">
+  <div class="top-bar">
+    <span id="score">⭐ 0</span>
+    <span id="timer">⏱️ 10</span>
   </div>
 
-  <div id="quiz" style="display:none;">
-    <div id="timer">⏱️ 10</div>
-    <p id="question"></p>
-    <div id="answers"></div>
-    <p id="message"></p>
-  </div>
+  <p id="question"></p>
+  <div id="answers"></div>
+  <p id="message"></p>
 
+  <!-- أصوات -->
+  <audio id="sound-correct" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3"></audio>
+  <audio id="sound-wrong" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3"></audio>
 </div>
-
-<script src="script.js"></script>
-</body>
-</html>
